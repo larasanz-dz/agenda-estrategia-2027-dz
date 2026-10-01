@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Planificación estratégica 2027 · Agenda</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EEF2EF; --surface:#FFFFFF; --ink:#14231D; --muted:#55645D; --pine:#2E5A4B;
+  --trail:#C98A1B; --trail-soft:#F6EBD5; --line:#C9D3CD; --pause:#E3E9E5; --focus:#2E5A4B;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#101A16; --surface:#17241F; --ink:#E7EEEA; --muted:#A3B2AA; --pine:#8FC0AC;
+    --trail:#E2A94A; --trail-soft:#2C2616; --line:#2D3D36; --pause:#1C2B25; --focus:#8FC0AC;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#101A16; --surface:#17241F; --ink:#E7EEEA; --muted:#A3B2AA; --pine:#8FC0AC;
+  --trail:#E2A94A; --trail-soft:#2C2616; --line:#2D3D36; --pause:#1C2B25; --focus:#8FC0AC;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Source Sans 3",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;font-size:17px;line-height:1.5}
+.wrap{max-width:760px;margin:0 auto;padding:40px 20px 72px}
+h1,h2,.time,.dur,.stop-title{font-family:"Barlow Condensed","Arial Narrow",Arial,sans-serif}
+header h1{font-size:clamp(40px,9vw,64px);line-height:1;margin:0 0 10px;font-weight:700;letter-spacing:.2px;color:var(--pine)}
+header p{margin:0;color:var(--muted);font-size:18px}
+.goal{margin:28px 0 0;padding:18px 20px;border-left:5px solid var(--trail);background:var(--trail-soft);border-radius:0 10px 10px 0}
+.goal strong{display:block;font-size:15px;color:var(--muted);font-weight:600;margin-bottom:2px}
+.goal span{font-size:20px;font-weight:600;line-height:1.35}
+.before{margin:36px 0 8px}
+.before h2,.day h2{font-size:30px;margin:0 0 4px;font-weight:700;color:var(--ink)}
+.day h2 small{display:block;font-family:"Source Sans 3",system-ui,sans-serif;font-size:17px;font-weight:400;color:var(--muted)}
+.checklist{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:8px}
+.checklist li{display:grid;grid-template-columns:92px 1fr;gap:12px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.checklist .when{font-weight:700;color:var(--pine);font-size:15px}
+.checklist .who{color:var(--muted)}
+.day{margin-top:48px}
+.route{list-style:none;margin:18px 0 0;padding:0;position:relative}
+.route::before{content:"";position:absolute;left:62px;top:8px;bottom:8px;border-left:3px dashed var(--line)}
+.stop{display:grid;grid-template-columns:52px 1fr;gap:22px;margin-bottom:14px;position:relative}
+.time{font-size:20px;font-weight:600;text-align:right;padding-top:14px;font-variant-numeric:tabular-nums;color:var(--ink)}
+.stop::after{content:"";position:absolute;left:55px;top:20px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:3px solid var(--pine)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.stop-head{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.stop-title{font-size:24px;font-weight:600;margin:0;line-height:1.15}
+.dur{font-size:17px;color:var(--muted);white-space:nowrap}
+.desc{margin:6px 0 0;color:var(--muted)}
+.row{margin:10px 0 0;padding-top:10px;border-top:1px solid var(--line)}
+.row b{display:block;font-size:14px;color:var(--pine);font-weight:700;margin-bottom:2px}
+.row.prep b{color:var(--trail)}
+.row p{margin:0}
+.row p + p{margin-top:6px}
+.ex{font-style:italic}
+.stop.pause .card{background:var(--pause);border-style:dashed;padding:8px 16px}
+.stop.pause .stop-title{font-size:19px;color:var(--muted);font-weight:500}
+.stop.pause::after{border-color:var(--line)}
+.stop.main .card{border:2px solid var(--trail);box-shadow:0 0 0 4px var(--trail-soft)}
+.stop.main::after{border-color:var(--trail);background:var(--trail)}
+.stop.main .stop-title{color:var(--ink)}
+.tag{display:inline-block;margin-top:6px;font-size:14px;font-weight:700;color:var(--trail)}
+.stop.end .card{background:transparent;border:none;padding:10px 0}
+.stop.end .stop-title{font-size:20px;color:var(--muted)}
+.stop.end::after{border-color:var(--pine);background:var(--pine)}
+footer{margin-top:48px;color:var(--muted);font-size:15px;border-top:1px solid var(--line);padding-top:16px}
+@media (max-width:520px){
+  body{font-size:16px}
+  .route::before{left:50px}
+  .stop{grid-template-columns:42px 1fr;gap:18px}
+  .stop::after{left:43px}
+  .time{font-size:18px}
+  .checklist li{grid-template-columns:1fr;gap:2px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>Planificación estratégica 2027</h1>
+  <p>Viernes 9 y sábado 10 de octubre · Antonio, Oliver, Rubén, Lara y Sara en la sala; Karola online</p>
+  <div class="goal"><strong>Si solo salimos con una cosa</strong><span>El plan 2027 firmado por los cuatro, construido sobre números reales y con los Rocks de empresa del primer trimestre.</span></div>
+</header>
+
+<section class="before" aria-labelledby="antes">
+  <h2 id="antes">Antes de venir</h2>
+  <ul class="checklist">
+    <li><span class="when">Lunes 5</span><span>Encuesta individual, antes de las 20:00 <span class="who">· todos</span></span></li>
+    <li><span class="when">Lunes 5</span><span>Borrador del V/TO completado <span class="who">· Antonio</span></span></li>
+    <li><span class="when">Martes 6</span><span>La foto de 2026 y las bases económicas 2027 rellenadas, antes de las 20:00 <span class="who">· Rubén y Oliver</span></span></li>
+    <li><span class="when">Jueves 8</span><span>Leer y comentar el borrador del V/TO, leer la foto de 2026 y las bases 2027, y preparar las frases de la salud del equipo <span class="who">· todos</span></span></li>
+  </ul>
+</section>
+
+<section class="day" aria-labelledby="viernes">
+  <h2 id="viernes">Viernes 9<small>¿Dónde estamos y a dónde vamos?</small></h2>
+  <ol class="route">
+    <li class="stop"><span class="time">09:00</span><div class="card">
+      <div class="stop-head"><h3 class="stop-title">Apertura</h3><span class="dur">15 min</span></div>
+      <p class="desc">Cómo llega cada uno, qué hay que decidir sí o sí y qué queda fuera.</p>
+      <div class="row"><b>Salimos con</b><p>Las decisiones imprescindibles y lo que queda fuera, acordados por todos.</p></div>
+      <div class="row prep"><b>Para preparar</b><p>Responder la encuesta.</p></div>
+    </div></li>
+
+    <li class="stop"><span class="time">09:15</span><div class="card">
+      <div class="stop-head"><h3 class="stop-title">La foto de 2026</h3><span class="dur">40 min</span></div>
+      <p class="desc">Comentamos los números clave del año, ya leídos antes.</p>
+      <div class="row"><b>Salimos con</b><p>Todos entendemos lo mismo sobre cómo ha ido 2026 y elegimos las tres conclusiones más importantes para el plan 2027.</p><p class="ex">Por ejemplo: «Las cancelaciones nos han costado X €, así que el plan 2027 tiene que reducirlas».</p></div>
+      <div class="row prep"><b>Para preparar</b><p>Rubén y Oliver la rellenan. Todos la leen antes del viernes.</p></div>
+    </div></li>
+
+    <li class="stop pause"><span class="time">09:55</span><div class="card"><div class="stop-head"><h3 class="stop-title">Pausa</h3><span class="dur">15 min</span></div></div></li>
+
+    <li class="stop"><span class="time">10:10</span><div class="card">
+      <div class="stop-head"><h3 class="stop-title">Lecciones aprendidas</h3><span class="dur">55 min</span></div>
+      <p class="desc">Repaso del año: qué ha funcionado, qué no y qué nos ha faltado.</p>
+      <div class="row"><b>Salimos con</b><p>Lo que seguimos haciendo porque funciona, lo que dejamos de hacer porque no aporta y lo que empezamos a hacer porque nos ha faltado. Y el problema recurrente de 2026 que no arrastramos a 2027.</p></div>
+      <div class="row prep"><b>Para preparar</b><p>La encuesta. Lara la compila por temas y sin nombres.</p></div>
+    </div></li>
+
+    <li class="stop"><span class="time">11:05</span><div class="card">
+      <div class="stop-head"><h3 class="stop-title">Salud del equipo</h3><span class="dur">50 min</span></div>
+      <p class="desc">Entre los cuatro de la L10: Antonio, Oliver, Rubén y Lara. Cada persona recibe de cada una de las demás su mayor fortaleza y lo que más necesitamos que cambie en su forma de trabajar. Hablamos de acciones concretas, no de la persona ni de sus actitudes. Sara lleva el tiempo.</p>
+      <div class="row"><b>Salimos con</b><p>Un compromiso personal de cada uno para 2027: una sola cosa que va a hacer distinto.</p></div>
+      <div class="row prep"><b>Para preparar</b><p>Para cada persona del equipo, dos frases sobre acciones concretas, no sobre cómo es ni sobre su actitud. Cada frase dice qué pasó, qué efecto tuvo y qué pides, y viene con un ejemplo real: una situación concreta en la que ocurrió.</p><p class="ex">Fortaleza: «Cuando hay que tomar una decisión difícil, pones los datos encima de la mesa aunque no sean buenas noticias, y eso nos ayuda a decidir bien».</p><p class="ex">Mejora: «Cuando algo de una decisión no te encaja, no lo dices en la reunión y aparece después; me gustaría que lo plantearas en el momento».</p></div>
+    </div></li>
+
+    <li class="stop"><span class="time">11:55</span><div class="card">
+      <div class="stop-head"><h3 class="stop-title">V/TO: valores, Core Focus y meta a 10 años</h3><span class="dur">75 min</span></div>
+      <p class="desc">Partimos de un borrador de Antonio para no empezar de cero, pero lo trabajamos entre los cuatro y tiene que salir 100% acordado.</p>
+      <div class="row"><b>Salimos con</b><p>Un resumen de lo que salió en la encuesta sobre valores, como primera hipótesis. El Core Focus: para qué existimos y en qué somos únicos. La meta a 10 años.</p></div>
+      <div class="row prep"><b>Para preparar</b><p>Leer y comentar el borrador de Antonio antes del jueves 8.</p></div>
+    </div></li>
+
+    <li class="stop pause"><span class="time">13:10</span><div class="card"><div class="stop-head"><h3 class="stop-title">Comida</h3><span class="dur">90 min</span></div></div></li>
+
+    <li class="stop"><span class="time">14:40</span><div class="card">
+      <div class="stop-head"><h3 class="stop-title">V/TO: Marketing Strategy</h3><span class="dur">30 min</span></div>
+      <p class="desc">A quién nos dirigimos y por qué nos eligen a nosotros.</p>
+      <div class="row"><b>Salimos con</b><p>Cliente objetivo y lo que nos diferencia, acordados.</p></div>
+      <div class="row prep"><b>Para preparar</b><p>Leer esa parte del borrador.</p></div>
+    </div></li>
+
+    <li class="stop"><span class="time">15:10</span><div class="card">
+      <div class="stop-head"><h3 class="stop-title">3-Year Picture</h3><span class="dur">40 min</span></div>
+      <p class="desc">Cómo es Desafío Zero en diciembre de 2029.</p>
+      <div class="row"><b>Salimos con</b><p>Ingresos, beneficio y cómo es la empresa en 2029, firmado por todos.</p></div>
+      <div class="row prep"><b>Para preparar</b><p>Leer esa parte del borrador.</p></div>
+    </div></li>
+
+    <li class="stop pause"><span class="time">15:50</span><div class="card"><div class="stop-head"><h3 class="stop-title">Pausa</h3><span class="dur">10 min</span></div></div></li>
+
+    <li class="stop main"><span class="time">16:00</span><div class="card">
+      <div class="stop-head"><h3 class="stop-title">Plan 2027</h3><span class="dur">100 min</span></div>
+      <p class="desc">El primer año del camino hacia 2029, construido sobre las bases económicas.</p>
+      <div class="row"><b>Salimos con</b><p>Ingresos, beneficio y de 3 a 7 objetivos medibles para 2027.</p></div>
+      <div class="row prep"><b>Para preparar</b><p>Bases económicas 2027, de Rubén y Oliver (martes 6). Todos las leen.</p></div>
+      <span class="tag">El objetivo principal del encuentro</span>
+    </div></li>
+
+    <li class="stop pause"><span class="time">17:40</span><div class="card"><div class="stop-head"><h3 class="stop-title">Pausa</h3><span class="dur">10 min</span></div></div></li>
+
+    <li class="stop"><span class="time">17:50</span><div class="card">
+      <div class="stop-head"><h3 class="stop-title">Accountability Chart</h3><span class="dur">40 min</span></div>
+      <p class="desc">Trabajamos sobre la versión de trabajo del chart. Tres preguntas: ¿es la estructura correcta para llegar a 2027? ¿Están las personas correctas en los asientos correctos? ¿Tiene cada uno tiempo suficiente para hacer bien su trabajo?</p>
+      <div class="row"><b>Salimos con</b><p>Una estructura que sostiene el plan, los huecos identificados y una autoevaluación de capacidad de cada uno en sus asientos.</p></div>
+    </div></li>
+
+    <li class="stop"><span class="time">18:30</span><div class="card">
+      <div class="stop-head"><h3 class="stop-title">Brainstorming de Rocks de empresa</h3><span class="dur">20 min</span></div>
+      <p class="desc">Todo lo que debería estar hecho el 31 de marzo. Solo se genera la lista, no se elige.</p>
+      <div class="row"><b>Salimos con</b><p>Una lista de candidatos a Rock de empresa para el sábado.</p></div>
+    </div></li>
+
+    <li class="stop"><span class="time">18:50</span><div class="card">
+      <div class="stop-head"><h3 class="stop-title">Cierre del día</h3><span class="dur">10 min</span></div>
+      <div class="row"><b>Salimos con</b><p>Lo decidido, repasado, y los temas pendientes, ordenados.</p></div>
+    </div></li>
+
+    <li class="stop end"><span class="time">19:00</span><div class="card"><h3 class="stop-title">Fin del día. La cena es cena, sin trabajo.</h3></div></li>
+  </ol>
+</section>
+
+<section class="day" aria-labelledby="sabado">
+  <h2 id="sabado">Sábado 10<small>¿Qué hacemos primero?</small></h2>
+  <ol class="route">
+    <li class="stop"><span class="time">08:30</span><div class="card">
+      <div class="stop-head"><h3 class="stop-title">Check-in</h3><span class="dur">5 min</span></div>
+      <p class="desc">Cómo llega cada uno.</p>
+    </div></li>
+
+    <li class="stop main"><span class="time">08:35</span><div class="card">
+      <div class="stop-head"><h3 class="stop-title">Rocks de empresa Q1</h3><span class="dur">75 min</span></div>
+      <p class="desc">De la lista del viernes elegimos los que se quedan, los que se descartan y los que se fusionan.</p>
+      <div class="row"><b>Salimos con</b><p>De 3 a 7 Rocks de empresa, cada uno con dueño, métrica, fecha y definición de «hecho».</p></div>
+      <span class="tag">La otra mitad del plan</span>
+    </div></li>
+
+    <li class="stop"><span class="time">09:50</span><div class="card">
+      <div class="stop-head"><h3 class="stop-title">IDS</h3><span class="dur">40 min</span></div>
+      <p class="desc">Resolvemos los temas que más bloquean los Rocks: buscar la causa, discutir y decidir.</p>
+      <div class="row"><b>Salimos con</b><p>Los 2-3 temas que más bloquean los Rocks de empresa, resueltos con responsable y fecha.</p></div>
+      <div class="row prep"><b>Para preparar</b><p>Los tres temas que pusiste en la encuesta.</p></div>
+    </div></li>
+
+    <li class="stop"><span class="time">10:30</span><div class="card">
+      <div class="stop-head"><h3 class="stop-title">Conclusión</h3><span class="dur">30 min</span></div>
+      <p class="desc">Repaso de decisiones, próximos pasos y qué contamos al equipo.</p>
+      <div class="row"><b>Salimos con</b><p>El plan 2027 firmado por los cuatro y el mensaje acordado para el equipo por la tarde.</p></div>
+    </div></li>
+
+    <li class="stop end"><span class="time">11:00</span><div class="card"><h3 class="stop-title">Fin de la planificación estratégica</h3></div></li>
+  </ol>
+</section>
+
+<footer>Cada bloque se apoya en el anterior, así que os pedimos estar de principio a fin.</footer>
+</div>
+</body>
+</html>
