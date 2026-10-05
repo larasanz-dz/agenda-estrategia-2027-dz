@@ -51,6 +51,7 @@ header p{margin:0;color:var(--muted);font-size:18px}
 .stop-title{font-size:24px;font-weight:600;margin:0;line-height:1.15}
 .dur{font-size:17px;color:var(--muted);white-space:nowrap}
 .desc{margin:6px 0 0;color:var(--muted)}
+.fac{margin:4px 0 0;font-size:15px;font-weight:600;color:var(--pine)}
 .row{margin:10px 0 0;padding-top:10px;border-top:1px solid var(--line)}
 .row b{display:block;font-size:14px;color:var(--pine);font-weight:700;margin-bottom:2px}
 .row.prep b{color:var(--trail)}
@@ -67,6 +68,16 @@ header p{margin:0;color:var(--muted);font-size:18px}
 .stop.end .card{background:transparent;border:none;padding:10px 0}
 .stop.end .stop-title{font-size:20px;color:var(--muted)}
 .stop.end::after{border-color:var(--pine);background:var(--pine)}
+.guide{margin-top:12px;border-top:1px solid var(--line);padding-top:8px}
+.guide summary{cursor:pointer;font-weight:700;font-size:15px;color:var(--pine);list-style:none;display:flex;align-items:center;gap:8px;min-height:32px}
+.guide summary::-webkit-details-marker{display:none}
+.guide summary::before{content:"+";display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;border:2px solid var(--pine);font-size:15px;line-height:1}
+.guide[open] summary::before{content:"–"}
+.guide h4{margin:10px 0 2px;font-size:14px;color:var(--muted);font-weight:700}
+.guide p,.guide li{font-size:15px}
+.guide a,footer a{color:var(--pine);font-weight:700}
+.guide ul{margin:2px 0 0;padding-left:18px}
+.guide li{margin-bottom:3px}
 footer{margin-top:48px;color:var(--muted);font-size:15px;border-top:1px solid var(--line);padding-top:16px}
 @media (max-width:520px){
   body{font-size:16px}
@@ -82,7 +93,7 @@ footer{margin-top:48px;color:var(--muted);font-size:15px;border-top:1px solid va
 <div class="wrap">
 <header>
   <h1>Planificación estratégica 2027</h1>
-  <p>Viernes 9 y sábado 10 de octubre · Antonio, Oliver, Rubén, Lara y Sara en la sala; Karola online</p>
+  <p>Viernes 9 y sábado 10 de octubre · Desayuno a las 9:00, comida a las 14:00 y cena a las 21:00 · Antonio, Oliver, Rubén, Lara y Sara en la sala; Karola online</p>
   <div class="goal"><strong>Si solo salimos con una cosa</strong><span>El plan 2027 firmado por los cuatro, construido sobre números reales y con los Rocks de empresa del primer trimestre.</span></div>
 </header>
 
@@ -92,6 +103,7 @@ footer{margin-top:48px;color:var(--muted);font-size:15px;border-top:1px solid va
     <li><span class="when">Lunes 5</span><span>Encuesta individual, antes de las 20:00 <span class="who">· todos</span></span></li>
     <li><span class="when">Lunes 5</span><span>Borrador del V/TO completado <span class="who">· Antonio</span></span></li>
     <li><span class="when">Martes 6</span><span>La foto de 2026 y las bases económicas 2027 rellenadas, antes de las 20:00 <span class="who">· Rubén y Oliver</span></span></li>
+    <li><span class="when">Viernes 9</span><span>Traer las conclusiones de la foto de 2026 y la lectura de las bases 2027, como directores de Finanzas y de Operaciones <span class="who">· Rubén y Oliver</span></span></li>
     <li><span class="when">Jueves 8</span><span>Leer y comentar el borrador del V/TO, leer la foto de 2026 y las bases 2027, y preparar las frases de la salud del equipo <span class="who">· todos</span></span></li>
   </ul>
 </section>
@@ -99,125 +111,156 @@ footer{margin-top:48px;color:var(--muted);font-size:15px;border-top:1px solid va
 <section class="day" aria-labelledby="viernes">
   <h2 id="viernes">Viernes 9<small>¿Dónde estamos y a dónde vamos?</small></h2>
   <ol class="route">
-    <li class="stop"><span class="time">09:00</span><div class="card">
+    <li class="stop pause"><span class="time">09:00</span><div class="card"><div class="stop-head"><h3 class="stop-title">Desayuno</h3><span class="dur">45 min</span></div></div></li>
+    <li class="stop"><span class="time">09:45</span><div class="card">
       <div class="stop-head"><h3 class="stop-title">Apertura</h3><span class="dur">15 min</span></div>
+      <p class="fac">Facilita: Lara</p>
       <p class="desc">Cómo llega cada uno, qué hay que decidir sí o sí y qué queda fuera.</p>
       <div class="row"><b>Salimos con</b><p>Las decisiones imprescindibles y lo que queda fuera, acordados por todos.</p></div>
       <div class="row prep"><b>Para preparar</b><p>Responder la encuesta.</p></div>
+    
+      <details class="guide"><summary>Guía para facilitar</summary><h4>Para qué</h4><p>Que todos sepamos qué tiene que salir de este día y medio y acordar las reglas del juego.</p><h4>Cómo llevarla</h4><ul><li>Abre con el objetivo: «Si el sábado salimos con una sola cosa, que sea el plan 2027 firmado por los cuatro».</li><li>Ronda breve de cómo llega cada uno.</li><li>Lee lo que salió en la encuesta sobre qué hay que decidir sí o sí y qué dejamos fuera.</li><li>Acordad las reglas: móviles fuera, lo que no toca se aparca para después y quien facilita puede cortar a cualquiera.</li></ul><h4>Para cerrar</h4><p>La lista de decisiones imprescindibles y la de «fuera de alcance», a la vista todo el día.</p><h4>Ojo con</h4><p>Que la apertura se coma tiempo. Son 15 minutos estrictos.</p></details>
     </div></li>
-
-    <li class="stop"><span class="time">09:15</span><div class="card">
+    <li class="stop"><span class="time">10:00</span><div class="card">
       <div class="stop-head"><h3 class="stop-title">La foto de 2026</h3><span class="dur">40 min</span></div>
+      <p class="fac">Facilita: Rubén y Oliver</p>
       <p class="desc">Comentamos los números clave del año, ya leídos antes.</p>
       <div class="row"><b>Salimos con</b><p>Todos entendemos lo mismo sobre cómo ha ido 2026 y elegimos las tres conclusiones más importantes para el plan 2027.</p><p class="ex">Por ejemplo: «Las cancelaciones nos han costado X €, así que el plan 2027 tiene que reducirlas».</p></div>
-      <div class="row prep"><b>Para preparar</b><p>Rubén y Oliver la rellenan. Todos la leen antes del viernes.</p></div>
+      <div class="row prep"><b>Para preparar</b><p>Rubén y Oliver la rellenan y, además, traen sus conclusiones: lo que ven en los números como director de Finanzas y director de Operaciones. No se trata de recorrer el Excel, sino de explicar qué nos dice. Todos la leen antes del viernes.</p></div>
+    
+      <details class="guide"><summary>Guía para facilitar</summary><h4>Para qué</h4><p>Que todos miremos la misma realidad antes de decidir nada sobre 2027.</p><h4>Cómo llevarla</h4><ul><li>Rubén y Oliver abren con sus conclusiones como directores de Finanzas y de Operaciones: qué ven en los números y qué les preocupa. No se recorre el Excel, que ya está leído.</li><li>Pide a cada uno qué conclusión saca de los números.</li><li>Cuando aparezca un «sí, pero…», pregunta: «¿es una causa o una justificación?».</li></ul><h4>Para cerrar</h4><p>Tres conclusiones escritas en forma de «como pasa X, el plan 2027 tiene que Y».</p><h4>Ojo con</h4><p>Que se convierta en una presentación de números o en una defensa del año.</p></details>
     </div></li>
-
-    <li class="stop pause"><span class="time">09:55</span><div class="card"><div class="stop-head"><h3 class="stop-title">Pausa</h3><span class="dur">15 min</span></div></div></li>
-
-    <li class="stop"><span class="time">10:10</span><div class="card">
+    <li class="stop pause"><span class="time">10:40</span><div class="card"><div class="stop-head"><h3 class="stop-title">Pausa</h3><span class="dur">15 min</span></div></div></li>
+    <li class="stop"><span class="time">10:55</span><div class="card">
       <div class="stop-head"><h3 class="stop-title">Lecciones aprendidas</h3><span class="dur">55 min</span></div>
+      <p class="fac">Facilita: Lara</p>
       <p class="desc">Repaso del año: qué ha funcionado, qué no y qué nos ha faltado.</p>
       <div class="row"><b>Salimos con</b><p>Lo que seguimos haciendo porque funciona, lo que dejamos de hacer porque no aporta y lo que empezamos a hacer porque nos ha faltado. Y el problema recurrente de 2026 que no arrastramos a 2027.</p></div>
       <div class="row prep"><b>Para preparar</b><p>La encuesta. Lara la compila por temas y sin nombres.</p></div>
+    
+      <details class="guide"><summary>Guía para facilitar</summary><h4>Para qué</h4><p>Convertir el año en aprendizajes útiles para 2027, no en un repaso de lo bueno y lo malo.</p><h4>Cómo llevarla</h4><ul><li>Presenta lo que salió en la encuesta, agrupado por temas y sin nombres.</li><li>Para cada tema, pregunta: «¿lo seguimos haciendo, lo dejamos o empezamos algo nuevo?».</li><li>Busca el problema que se ha repetido durante el año.</li><li>Apunta aparte lo que sea un tema pendiente o un posible Rock.</li></ul><h4>Para cerrar</h4><p>Lo que seguimos, lo que dejamos y lo que empezamos, y el problema recurrente nombrado en una frase.</p><h4>Ojo con</h4><p>Buscar culpables. Reconduce siempre a «¿qué hacemos distinto?».</p></details>
     </div></li>
-
-    <li class="stop"><span class="time">11:05</span><div class="card">
+    <li class="stop"><span class="time">11:50</span><div class="card">
       <div class="stop-head"><h3 class="stop-title">Salud del equipo</h3><span class="dur">50 min</span></div>
+      <p class="fac">Facilita: Lara y Oliver</p>
       <p class="desc">Entre los cuatro de la L10: Antonio, Oliver, Rubén y Lara. Cada persona recibe de cada una de las demás su mayor fortaleza y lo que más necesitamos que cambie en su forma de trabajar. Hablamos de acciones concretas, no de la persona ni de sus actitudes. Sara lleva el tiempo.</p>
       <div class="row"><b>Salimos con</b><p>Un compromiso personal de cada uno para 2027: una sola cosa que va a hacer distinto.</p></div>
       <div class="row prep"><b>Para preparar</b><p>Para cada persona del equipo, dos frases sobre acciones concretas, no sobre cómo es ni sobre su actitud. Cada frase dice qué pasó, qué efecto tuvo y qué pides, y viene con un ejemplo real: una situación concreta en la que ocurrió.</p><p class="ex">Fortaleza: «Cuando hay que tomar una decisión difícil, pones los datos encima de la mesa aunque no sean buenas noticias, y eso nos ayuda a decidir bien».</p><p class="ex">Mejora: «Cuando algo de una decisión no te encaja, no lo dices en la reunión y aparece después; me gustaría que lo plantearas en el momento».</p></div>
+    
+      <details class="guide"><summary>Guía para facilitar</summary><h4>Para qué</h4><p>Decirnos lo que normalmente no nos decimos, para planificar después como equipo.</p><h4>Cómo llevarla</h4><ul><li>Recuerda las reglas al empezar: acciones concretas, no la persona ni sus actitudes, y quien recibe solo dice «gracias».</li><li>Una persona cada vez, unos 12 minutos por persona. Cada uno le dice su fortaleza y su mejora, con su ejemplo.</li><li>Si alguien se defiende, recuerda la regla con suavidad. Si alguien se remueve, haced una pausa corta.</li><li>En el turno de Lara, lleva la sesión Oliver: ella también recibe.</li></ul><h4>Para cerrar</h4><p>Cada persona dice su compromiso: una sola cosa que va a hacer distinto en 2027.</p><h4>Ojo con</h4><p>Quedarse en elogios para no incomodar, o convertirlo en un ataque.</p></details>
     </div></li>
-
-    <li class="stop"><span class="time">11:55</span><div class="card">
+    <li class="stop pause"><span class="time">12:40</span><div class="card"><div class="stop-head"><h3 class="stop-title">Pausa</h3><span class="dur">5 min</span></div></div></li>
+    <li class="stop"><span class="time">12:45</span><div class="card">
       <div class="stop-head"><h3 class="stop-title">V/TO: valores, Core Focus y meta a 10 años</h3><span class="dur">75 min</span></div>
+      <p class="fac">Facilita: Antonio presenta su propuesta de V/TO y el resto la debatimos</p>
       <p class="desc">Partimos de un borrador de Antonio para no empezar de cero, pero lo trabajamos entre los cuatro y tiene que salir 100% acordado.</p>
       <div class="row"><b>Salimos con</b><p>Un resumen de lo que salió en la encuesta sobre valores, como primera hipótesis. El Core Focus: para qué existimos y en qué somos únicos. La meta a 10 años.</p></div>
       <div class="row prep"><b>Para preparar</b><p>Leer y comentar el borrador de Antonio antes del jueves 8.</p></div>
+    
+      <details class="guide"><summary>Guía para facilitar</summary><h4>Para qué</h4><p>Salir con un Core Focus y una meta a 10 años en los que nos reconozcamos los cuatro.</p><h4>Cómo llevarla</h4><ul><li>Antonio presenta su borrador en 10-15 minutos y, a continuación, el resumen de valores de la encuesta como hipótesis.</li><li>Se debate parte por parte con tres preguntas: «¿nos reconocemos?, ¿qué sobra?, ¿qué falta?».</li><li>Si una palabra os atasca más de 10 minutos, va a temas pendientes.</li><li>Se busca acuerdo al 100%, no mayoría.</li></ul><h4>Para cerrar</h4><p>Leer en voz alta la versión acordada y preguntar uno por uno si la firma.</p><h4>Ojo con</h4><p>Que quien presenta defienda su borrador en vez de escuchar. Antonio presenta y después pregunta.</p></details>
     </div></li>
-
-    <li class="stop pause"><span class="time">13:10</span><div class="card"><div class="stop-head"><h3 class="stop-title">Comida</h3><span class="dur">90 min</span></div></div></li>
-
-    <li class="stop"><span class="time">14:40</span><div class="card">
+    <li class="stop pause"><span class="time">14:00</span><div class="card"><div class="stop-head"><h3 class="stop-title">Comida</h3><span class="dur">90 min</span></div></div></li>
+    <li class="stop"><span class="time">15:30</span><div class="card">
       <div class="stop-head"><h3 class="stop-title">V/TO: Marketing Strategy</h3><span class="dur">30 min</span></div>
+      <p class="fac">Facilitan: Antonio y Rubén</p>
       <p class="desc">A quién nos dirigimos y por qué nos eligen a nosotros.</p>
       <div class="row"><b>Salimos con</b><p>Cliente objetivo y lo que nos diferencia, acordados.</p></div>
       <div class="row prep"><b>Para preparar</b><p>Leer esa parte del borrador.</p></div>
+    
+      <details class="guide"><summary>Guía para facilitar</summary><h4>Para qué</h4><p>Acordar a quién nos dirigimos y por qué nos eligen a nosotros.</p><h4>Cómo llevarla</h4><ul><li>Antonio y Rubén presentan la propuesta que han preparado.</li><li>Contrastadla con los datos de la foto de 2026: canales y reservas.</li><li>Pregunta: «¿esto nos diferencia de verdad?».</li></ul><h4>Para cerrar</h4><p>Cliente objetivo y diferenciación acordados. Lo que quede abierto pasa a una L10.</p><h4>Ojo con</h4><p>30 minutos es poco. Si no se cierra, no pasa nada: es lo primero que se puede aplazar.</p></details>
     </div></li>
-
-    <li class="stop"><span class="time">15:10</span><div class="card">
+    <li class="stop"><span class="time">16:00</span><div class="card">
       <div class="stop-head"><h3 class="stop-title">3-Year Picture</h3><span class="dur">40 min</span></div>
+      <p class="fac">Facilita: Antonio</p>
       <p class="desc">Cómo es Desafío Zero en diciembre de 2029.</p>
       <div class="row"><b>Salimos con</b><p>Ingresos, beneficio y cómo es la empresa en 2029, firmado por todos.</p></div>
       <div class="row prep"><b>Para preparar</b><p>Leer esa parte del borrador.</p></div>
+    
+      <details class="guide"><summary>Guía para facilitar</summary><h4>Para qué</h4><p>Una imagen compartida de DZ en diciembre de 2029 que conecte la visión con el plan del año.</p><h4>Cómo llevarla</h4><ul><li>Primero los números: fecha, ingresos y beneficio.</li><li>Después, cómo se ve la empresa: equipo, destinos, expediciones, clientes.</li><li>Contrastad con lo que dijo la foto de 2026: «¿es creíble?».</li></ul><h4>Para cerrar</h4><p>Pregunta final: «¿lo firmamos, sabiendo lo que hemos visto esta mañana?».</p><h4>Ojo con</h4><p>Que se convierta en una lista de deseos sin números.</p></details>
     </div></li>
-
-    <li class="stop pause"><span class="time">15:50</span><div class="card"><div class="stop-head"><h3 class="stop-title">Pausa</h3><span class="dur">10 min</span></div></div></li>
-
-    <li class="stop main"><span class="time">16:00</span><div class="card">
+    <li class="stop pause"><span class="time">16:40</span><div class="card"><div class="stop-head"><h3 class="stop-title">Pausa</h3><span class="dur">10 min</span></div></div></li>
+    <li class="stop main"><span class="time">16:50</span><div class="card">
       <div class="stop-head"><h3 class="stop-title">Plan 2027</h3><span class="dur">100 min</span></div>
+      <p class="fac">Facilita: Lara, con Rubén aportando los números</p>
       <p class="desc">El primer año del camino hacia 2029, construido sobre las bases económicas.</p>
       <div class="row"><b>Salimos con</b><p>Ingresos, beneficio y de 3 a 7 objetivos medibles para 2027.</p></div>
-      <div class="row prep"><b>Para preparar</b><p>Bases económicas 2027, de Rubén y Oliver (martes 6). Todos las leen.</p></div>
+      <div class="row prep"><b>Para preparar</b><p>Rubén y Oliver rellenan las bases económicas 2027 (martes 6) y traen su lectura: qué implican el punto de equilibrio, los escenarios y el calendario para el plan. Todos las leen.</p></div>
       <span class="tag">El objetivo principal del encuentro</span>
+    
+      <details class="guide"><summary>Guía para facilitar</summary><h4>Para qué</h4><p>El objetivo principal del encuentro: ingresos, beneficio y de 3 a 7 objetivos medibles para 2027.</p><h4>Cómo llevarla</h4><ul><li>Abre con la pregunta: «Es 31 de diciembre de 2027 y ha sido un buen año. ¿Qué ha pasado?».</li><li>Rubén explica su lectura de las bases como director de Finanzas (punto de equilibrio y escenarios) y Oliver la suya como director de Operaciones (qué calendario podemos operar).</li><li>Separa resultados («ha pasado X») de proyectos («hemos hecho Y»). Los proyectos se guardan para los Rocks.</li><li>Para cada objetivo: «¿con qué número sabremos que se ha cumplido?». Recorta con tres filtros: ¿empuja 2029?, ¿cabe en la caja?, ¿sin esto 2027 fracasa?</li></ul><h4>Para cerrar</h4><p>Leer los objetivos finales en voz alta. Ninguno sin número.</p><h4>Ojo con</h4><p>Acabar con más de siete objetivos: pregunta «¿cuál quitamos?». Y el cansancio: mejor de pie, y pausa si hace falta.</p></details>
     </div></li>
-
-    <li class="stop pause"><span class="time">17:40</span><div class="card"><div class="stop-head"><h3 class="stop-title">Pausa</h3><span class="dur">10 min</span></div></div></li>
-
-    <li class="stop"><span class="time">17:50</span><div class="card">
+    <li class="stop pause"><span class="time">18:30</span><div class="card"><div class="stop-head"><h3 class="stop-title">Pausa</h3><span class="dur">10 min</span></div></div></li>
+    <li class="stop"><span class="time">18:40</span><div class="card">
       <div class="stop-head"><h3 class="stop-title">Accountability Chart</h3><span class="dur">40 min</span></div>
+      <p class="fac">Facilita: Lara</p>
       <p class="desc">Trabajamos sobre la versión de trabajo del chart. Tres preguntas: ¿es la estructura correcta para llegar a 2027? ¿Están las personas correctas en los asientos correctos? ¿Tiene cada uno tiempo suficiente para hacer bien su trabajo?</p>
       <div class="row"><b>Salimos con</b><p>Una estructura que sostiene el plan, los huecos identificados y una autoevaluación de capacidad de cada uno en sus asientos.</p></div>
+    
+      <details class="guide"><summary>Guía para facilitar</summary><h4>Para qué</h4><p>Comprobar que la estructura sostiene el plan que acabamos de decidir.</p><h4>Cómo llevarla</h4><ul><li>Recuerda que son funciones, no personas, pensadas a 6-12 meses.</li><li>Tres preguntas: ¿es la estructura correcta?, ¿están las personas correctas en los asientos correctos?, ¿tiene cada uno tiempo suficiente?</li><li>Cada uno habla de sus asientos, no de los de los demás.</li></ul><h4>Para cerrar</h4><p>Los huecos y los asientos con dudas, apuntados en temas pendientes.</p><h4>Ojo con</h4><p>Ponerse a rediseñar el organigrama en la sala. No hay tiempo para eso.</p></details>
     </div></li>
-
-    <li class="stop"><span class="time">18:30</span><div class="card">
-      <div class="stop-head"><h3 class="stop-title">Brainstorming de Rocks de empresa</h3><span class="dur">20 min</span></div>
-      <p class="desc">Todo lo que debería estar hecho el 31 de marzo. Solo se genera la lista, no se elige.</p>
-      <div class="row"><b>Salimos con</b><p>Una lista de candidatos a Rock de empresa para el sábado.</p></div>
-    </div></li>
-
-    <li class="stop"><span class="time">18:50</span><div class="card">
+    <li class="stop"><span class="time">19:20</span><div class="card">
       <div class="stop-head"><h3 class="stop-title">Cierre del día</h3><span class="dur">10 min</span></div>
-      <div class="row"><b>Salimos con</b><p>Lo decidido, repasado, y los temas pendientes, ordenados.</p></div>
+      <p class="fac">Facilita: Lara</p>
+      <p class="desc">Repasamos lo decidido y cerramos con una ronda: un agradecimiento y un «me he dado cuenta de…».</p>
+      <div class="row"><b>Salimos con</b><p>Lo decidido, repasado; los temas pendientes, ordenados; y el día cerrado en equipo.</p></div>
+    
+      <details class="guide"><summary>Guía para facilitar</summary><h4>Para qué</h4><p>Cerrar el día en equipo y dejar preparado el sábado.</p><h4>Cómo llevarla</h4><ul><li>Repaso rápido de lo decidido hoy.</li><li>Ronda: cada uno dice un agradecimiento y un «me he dado cuenta de…». Breve y sin debate.</li></ul><h4>Para cerrar</h4><p>Recordar la hora del sábado. La cena es cena, sin trabajo.</p><h4>Ojo con</h4><p>Que se reabra un debate del día.</p></details>
     </div></li>
-
-    <li class="stop end"><span class="time">19:00</span><div class="card"><h3 class="stop-title">Fin del día. La cena es cena, sin trabajo.</h3></div></li>
+    <li class="stop end"><span class="time">19:30</span><div class="card"><h3 class="stop-title">Fin del día. Cena a las 21:00, sin trabajo.</h3></div></li>
   </ol>
 </section>
 
 <section class="day" aria-labelledby="sabado">
   <h2 id="sabado">Sábado 10<small>¿Qué hacemos primero?</small></h2>
   <ol class="route">
-    <li class="stop"><span class="time">08:30</span><div class="card">
+    <li class="stop pause"><span class="time">09:00</span><div class="card"><div class="stop-head"><h3 class="stop-title">Desayuno</h3><span class="dur">45 min</span></div></div></li>
+    <li class="stop"><span class="time">09:45</span><div class="card">
       <div class="stop-head"><h3 class="stop-title">Check-in</h3><span class="dur">5 min</span></div>
+      <p class="fac">Facilita: Sara</p>
       <p class="desc">Cómo llega cada uno.</p>
+    
+      <details class="guide"><summary>Guía para facilitar</summary><h4>Para qué</h4><p>Arrancar sabiendo cómo llega cada uno.</p><h4>Cómo llevarla</h4><ul><li>Una palabra por persona.</li></ul><h4>Para cerrar</h4><p>Paso directo al brainstorming.</p><h4>Ojo con</h4><p>Comentar las palabras de los demás. Solo se escuchan.</p></details>
     </div></li>
-
-    <li class="stop main"><span class="time">08:35</span><div class="card">
+    <li class="stop"><span class="time">09:50</span><div class="card">
+      <div class="stop-head"><h3 class="stop-title">Ideas para los Rocks de empresa</h3><span class="dur">20 min</span></div>
+      <p class="fac">Facilita: Sara</p>
+      <p class="desc">Todo lo que creemos que debería estar en marcha o hecho el 31 de marzo. Vale todo: proyectos, ideas, preocupaciones. Primero se genera la lista, sin elegir ni discutir.</p>
+      <div class="row"><b>Salimos con</b><p>Una lista en bruto de ideas y proyectos candidatos a Rock de empresa.</p></div>
+    
+      <details class="guide"><summary>Guía para facilitar</summary><h4>Para qué</h4><p>Tener una lista amplia de candidatos antes de elegir. Aquí no se redactan Rocks: salen ideas y proyectos en bruto, y se convierten en Rocks en el bloque siguiente.</p><h4>Cómo llevarla</h4><ul><li>Lanza la pregunta: «¿Qué tiene que estar hecho el 31 de marzo para que 2027 vaya por buen camino?».</li><li>Primero cada uno piensa en silencio unos minutos; después se ponen todas las ideas en común.</li><li>Vale todo: proyectos, ideas, preocupaciones. No hace falta formularlas bien.</li><li>No se elige ni se discute. Si alguien defiende una idea: «eso, en el siguiente bloque».</li></ul><h4>Para cerrar</h4><p>Una lista sin duplicados, de unas 10-20 ideas.</p><h4>Ojo con</h4><p>Empezar a debatir antes de tiempo.</p></details>
+    </div></li>
+    <li class="stop main"><span class="time">10:10</span><div class="card">
       <div class="stop-head"><h3 class="stop-title">Rocks de empresa Q1</h3><span class="dur">75 min</span></div>
-      <p class="desc">De la lista del viernes elegimos los que se quedan, los que se descartan y los que se fusionan.</p>
+      <p class="fac">Facilita: Lara, que también hace el test de carga</p>
+      <p class="desc">De esa lista elegimos los que se quedan, los que se descartan y los que se fusionan.</p>
       <div class="row"><b>Salimos con</b><p>De 3 a 7 Rocks de empresa, cada uno con dueño, métrica, fecha y definición de «hecho».</p></div>
       <span class="tag">La otra mitad del plan</span>
+    
+      <details class="guide"><summary>Guía para facilitar</summary><h4>Para qué</h4><p>Salir con 3-7 Rocks de empresa, cada uno con dueño, métrica, fecha y definición de «hecho».</p><h4>Cómo llevarla</h4><ul><li>De la lista, decidid qué se queda, qué se descarta y qué se fusiona.</li><li>Convertid cada idea en Rock con una pregunta: «de esto, ¿qué resultado concreto tiene que estar hecho el 31 de marzo?». Por ejemplo, «Plan comercial 2027» pasa a ser «Coste por reserva medido cada semana por canal, activo en la L10 el 31 de marzo». Lo que no tenga un resultado de 90 días va a temas pendientes o a más adelante.</li><li>Cada Rock se escribe como una frase de sí o no: «el 31 de marzo, ¿está hecho?».</li><li>Test de carga (lo hace Lara): cuando los Rocks ya tienen dueño, pregunta en voz alta cuántos acaba teniendo cada uno y si le caben en su tiempo real. Traction marca un máximo de 7 por persona, sumando los de empresa y los individuales; con vuestras horas, conviene bastantes menos. Si a alguien no le caben, se reparte o se recorta.</li><li>Para cada Rock: «X necesita Y de Z antes de tal fecha».</li></ul><h4>Para cerrar</h4><p>Leer la lista final con sus dueños.</p><h4>Herramienta</h4><p><a href="https://larasanz-dz.github.io/guia-eos/" target="_blank" rel="noopener">Guía EOS · calculadora de Rocks y de IDS</a></p><h4>Ojo con</h4><p>Rocks que en realidad son proyectos sin fecha de «hecho», o quedarse con demasiados.</p></details>
     </div></li>
-
-    <li class="stop"><span class="time">09:50</span><div class="card">
+    <li class="stop pause"><span class="time">11:25</span><div class="card"><div class="stop-head"><h3 class="stop-title">Pausa</h3><span class="dur">10 min</span></div></div></li>
+    <li class="stop"><span class="time">11:35</span><div class="card">
       <div class="stop-head"><h3 class="stop-title">IDS</h3><span class="dur">40 min</span></div>
+      <p class="fac">Facilitan: Oliver y Lara</p>
       <p class="desc">Resolvemos los temas que más bloquean los Rocks: buscar la causa, discutir y decidir.</p>
       <div class="row"><b>Salimos con</b><p>Los 2-3 temas que más bloquean los Rocks de empresa, resueltos con responsable y fecha.</p></div>
       <div class="row prep"><b>Para preparar</b><p>Los tres temas que pusiste en la encuesta.</p></div>
+    
+      <details class="guide"><summary>Guía para facilitar</summary><h4>Para qué</h4><p>Resolver los temas que más bloquean los Rocks.</p><h4>Cómo llevarla</h4><ul><li>Cada uno elige los tres temas que más bloquean, y se trabajan en orden.</li><li>Identificar: pregunta «¿por qué?» hasta llegar a la causa real.</li><li>Discutir: cada uno habla una vez. Corta cuando los argumentos empiezan a repetirse.</li><li>Resolver: una decisión, una tarea o un Rock.</li></ul><h4>Para cerrar</h4><p>Cada tema con responsable y fecha. Si no los tiene, no está resuelto.</p><h4>Herramienta</h4><p><a href="https://larasanz-dz.github.io/guia-eos/" target="_blank" rel="noopener">Guía EOS · calculadora de Rocks y de IDS</a></p><h4>Ojo con</h4><p>Pasarse el bloque discutiendo sin decidir.</p></details>
     </div></li>
-
-    <li class="stop"><span class="time">10:30</span><div class="card">
+    <li class="stop"><span class="time">12:15</span><div class="card">
       <div class="stop-head"><h3 class="stop-title">Conclusión</h3><span class="dur">30 min</span></div>
+      <p class="fac">Facilita: Lara</p>
       <p class="desc">Repaso de decisiones, próximos pasos y qué contamos al equipo.</p>
       <div class="row"><b>Salimos con</b><p>El plan 2027 firmado por los cuatro y el mensaje acordado para el equipo por la tarde.</p></div>
+    
+      <details class="guide"><summary>Guía para facilitar</summary><h4>Para qué</h4><p>Cerrar con un compromiso firme y un mensaje claro para el equipo.</p><h4>Cómo llevarla</h4><ul><li>Lee las decisiones y los próximos pasos.</li><li>Acordad qué se cuenta al equipo por la tarde y qué no.</li><li>Firmad el plan.</li><li>Cada uno pone nota a la sesión del 1 al 10 y dice qué la habría subido un punto.</li></ul><h4>Para cerrar</h4><p>Firma y agradecimiento.</p><h4>Ojo con</h4><p>Quedarse sin tiempo. Empieza puntual.</p></details>
     </div></li>
-
-    <li class="stop end"><span class="time">11:00</span><div class="card"><h3 class="stop-title">Fin de la planificación estratégica</h3></div></li>
+    <li class="stop end"><span class="time">12:45</span><div class="card"><h3 class="stop-title">Fin de la planificación estratégica. Preparamos la tarde y comemos con todo el equipo a las 14:00.</h3></div></li>
   </ol>
 </section>
 
-<footer>Cada bloque se apoya en el anterior, así que os pedimos estar de principio a fin.</footer>
+<footer>Cada bloque se apoya en el anterior, así que os pedimos estar de principio a fin.<br>Para los Rocks y el IDS usaremos la <a href="https://larasanz-dz.github.io/guia-eos/" target="_blank" rel="noopener">Guía EOS · calculadora de Rocks y de IDS</a>.</footer>
 </div>
 </body>
 </html>
